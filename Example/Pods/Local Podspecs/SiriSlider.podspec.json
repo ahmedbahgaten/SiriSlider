@@ -1,8 +1,8 @@
 {
   "name": "SiriSlider",
   "version": "0.1.0",
-  "summary": "SiriSlider is library for iOS apps, offering customizable slider views with dual thumb controls for adjusting minimum and maximum values. Supporting Right-to-Left (RTL) layout, it enhances usability across languages. With seamless integration and extensive customization options, ThumbSlider simplifies slider implementation, empowering developers to deliver polished user experiences.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "SiriSlider is a highly customizable dual ends slider in UIKit",
+  "description": "SiriSlider is a library designed to provide a customizable slider view for iOS applications. With SiriSlider, you can effortlessly adjust both minimum and maximum values using intuitive thumb controls. This feature-rich slider supports Right-to-Left (RTL) layout, ensuring compatibility with diverse language preferences and user interfaces. Whether you are developing a range picker, filter selector, or any application requiring precise value adjustment, ThumbSlider offers a seamless and visually appealing solution. With its straightforward integration and extensive customization options, ThumbSlider empowers developers to enhance user interaction and elevate the usability of their iOS applications",
   "homepage": "https://github.com/ahmedbahgaten/SiriSlider",
   "license": {
     "type": "MIT",
@@ -22,5 +22,6 @@
   "frameworks": [
     "UIKit",
     "Combine"
-  ]
+  ],
+  "swift_version": "5.0"
 }
