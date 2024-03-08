@@ -8,7 +8,42 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+
+## Features
+- [x] Dual thumbs control
+- [x] Highly customizable
+- [x] RTL Support
+
 ## Requirements
+iOS 13+
+
+## Usage
+- Place a UIView in your screen then go to the identity inspector and set the custom class to be **SiriSliderView**
+- Go to your ViewController where the slider outlet exists and configure the slider appearance using SiriSliderConfiguration class.
+
+Check the following example.
+```swift
+  private func config() {
+    let sliderConfig = SiriSliderConfiguration()
+    sliderConfig.labelTextColor = .systemBlue
+    sliderConfig.headColor = .lightGray
+    sliderConfig.headSize = CGSize(width: 20, height: 20)
+    sliderConfig.headRadius = 10
+    sliderConfig.minPointValue = 0
+    sliderConfig.maxPointValue = 150
+    sliderConfig.startAt = 80
+    sliderConfig.endAt = 140
+    sliderConfig.labelPosition = .top
+    sliderConfig.outerTrackHeight = 2
+    sliderConfig.outerTrackColor = .lightGray
+    sliderConfig.innerTrackColor = .systemBlue
+    sliderConfig.innerTrackHeight = 2
+    siriSliderView.setConfig(config: sliderConfig)
+  }
+```
+<img src="https://github.com/ahmedbahgaten/SiriSlider/blob/main/Example.png" alt="Alt text" width="250" height="500">
+
+
 
 ## Installation
 
