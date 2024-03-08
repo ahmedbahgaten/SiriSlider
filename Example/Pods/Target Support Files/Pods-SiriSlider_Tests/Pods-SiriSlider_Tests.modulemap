@@ -1,0 +1,6 @@
+framework module Pods_SiriSlider_Tests {
+  umbrella header "Pods-SiriSlider_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

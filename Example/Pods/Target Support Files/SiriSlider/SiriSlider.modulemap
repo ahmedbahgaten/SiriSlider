@@ -1,0 +1,6 @@
+framework module SiriSlider {
+  umbrella header "SiriSlider-umbrella.h"
+
+  export *
+  module * { export * }
+}
