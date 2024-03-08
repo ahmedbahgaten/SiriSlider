@@ -1,6 +1,5 @@
 # SiriSlider
 
-[![CI Status](https://img.shields.io/travis/ahmedbahgaten/SiriSlider.svg?style=flat)](https://travis-ci.org/ahmedbahgaten/SiriSlider)
 [![Version](https://img.shields.io/cocoapods/v/SiriSlider.svg?style=flat)](https://cocoapods.org/pods/SiriSlider)
 [![License](https://img.shields.io/cocoapods/l/SiriSlider.svg?style=flat)](https://cocoapods.org/pods/SiriSlider)
 [![Platform](https://img.shields.io/cocoapods/p/SiriSlider.svg?style=flat)](https://cocoapods.org/pods/SiriSlider)
