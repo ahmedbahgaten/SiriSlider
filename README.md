@@ -43,7 +43,15 @@ Check the following example.
 ```
 <img src="https://github.com/ahmedbahgaten/SiriSlider/blob/main/Example.png" alt="Alt text" width="250" height="500">
 
-
+To provide your custom thumb view you can do the following
+- If you want to provide a custom left thumb view, you have to create a class that inherits from LeadingHeadView class, then you can provide your custom appearance of custom view and then set the sliderConfig.customLeadingView to your custom class as follow
+```swift
+    sliderConfig.customLeadingView = MyCustomLeftThumbView()
+```
+- If you want to provide a custom right thumb view, you have to create a class that inhertis from TrailingHeadView class, then you can provide your custom appearance for this custom view and then set the sliderConfig.customTrailingView to your custom class as follow
+```swift
+    sliderConfig.customTrailingView = MyCustomLRightThumbView()
+```
 
 ## Installation
 
