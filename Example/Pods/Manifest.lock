@@ -1,0 +1,16 @@
+PODS:
+  - SiriSlider (0.1.0)
+
+DEPENDENCIES:
+  - SiriSlider (from `../`)
+
+EXTERNAL SOURCES:
+  SiriSlider:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SiriSlider: 124dd277c36ebd1b9779c02d3ef428d64b4f9b2d
+
+PODFILE CHECKSUM: 3baca435bf684571788a4700955a10107b5fd025
+
+COCOAPODS: 1.14.3

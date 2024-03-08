@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Xcode
+*.swp
+*.xcworkspace
+*.xcuserdatad
+*.xcuserdata
+/*.swp
+/*.lock
+/*.mode1
+/*.mode1v3
+/*.mode2v3
+/*.perspective
+/*.perspectivev3
+/*.pbxuser
+/*.xccheckout
+/*.xcscmblueprint
+/*.xcscheme
+
+
+# Build files
+/build
+/DerivedData
+
+Example/Pods/Target Support Files
+_Pods.xcodeproj
