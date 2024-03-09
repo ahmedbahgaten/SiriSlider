@@ -1,9 +1,9 @@
-//
-//  SiriSlider.swift
-//  SiriSlider
-//
-//  Created by Ahmed Bahgat on 07/03/2024.
-//
+  //
+  //  SiriSlider.swift
+  //  SiriSlider
+  //
+  //  Created by Ahmed Bahgat on 07/03/2024.
+  //
 
 import Foundation
 
@@ -50,14 +50,11 @@ public class SiriSliderView: UIView {
     super.init(coder: coder)
   }
   
+    //MARK: - Lifecycle
   public override func layoutSubviews() {
     super.layoutSubviews()
     leadingLbl.text = getLeadingHeadReading().description
     trailingLbl.text = getTrailingHeadReading().description
-  }
-  
-  public override func didMoveToSuperview() {
-    super.didMoveToSuperview()
   }
     //MARK: - Methods
   private func setupBinding() {
@@ -119,33 +116,13 @@ public class SiriSliderView: UIView {
   }
   
   private func getLeadingHeadReading() -> Double {
-    let minPointValue = configuration.minPointValue
-    let maxPointValue = configuration.maxPointValue
-    let leadingHeadWidth = leadingHeadView.frame.size.width / 2
-    var position = leadingHeadView.getHeadPosition()
-    let sliderFrame = frame.size.width
-    if position == sliderFrame - leadingHeadWidth {
-      position += leadingHeadWidth
-    }else if position == leadingHeadWidth {
-      position -= leadingHeadWidth
-    }
-    let ratio = position / sliderFrame
-    return (minPointValue + (ratio * (maxPointValue - minPointValue))).rounded(.down)
+    return leadingHeadView.getReading(minValue: configuration.minPointValue,
+                                      maxValue: configuration.maxPointValue)
   }
   
   private func getTrailingHeadReading() -> Double {
-    let minPointValue = configuration.minPointValue
-    let maxPointValue = configuration.maxPointValue
-    var position = trailingHeadView.getHeadPosition()
-    let trailingHeadWidth = trailingHeadView.frame.size.width / 2
-    let sliderFrame = frame.size.width
-    if position == sliderFrame - trailingHeadWidth {
-      position += trailingHeadWidth
-    }else if position == trailingHeadWidth {
-      position -= trailingHeadWidth
-    }
-    let ratio = position / sliderFrame
-    return (minPointValue + (ratio * (maxPointValue - minPointValue))).rounded(.down)
+    return trailingHeadView.getReading(minValue: configuration.minPointValue,
+                                       maxValue: configuration.maxPointValue)
   }
   
   private func initialLeadingHeadViewSetup() {

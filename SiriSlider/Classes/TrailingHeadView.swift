@@ -47,7 +47,7 @@ public class TrailingHeadView:SliderHeadView {
     }
   }
   
-  func getMinXPoint() -> CGFloat {
+  private func getMinXPoint() -> CGFloat {
     guard let superView = superview else { return 0 }
     guard let theOtherHead = (superView.subviews.first { $0 is LeadingHeadView }) else { return 0 }
     
@@ -58,7 +58,7 @@ public class TrailingHeadView:SliderHeadView {
     }
   }
   
-  func getMaxXPoint() -> CGFloat {
+  private func getMaxXPoint() -> CGFloat {
     guard let superView = superview else { return 0 }
     guard let theOtherHead = (superView.subviews.first { $0 is LeadingHeadView }) else { return 0 }
     
@@ -69,12 +69,26 @@ public class TrailingHeadView:SliderHeadView {
     }
   }
   
-  func getHeadPosition() -> Double {
+  private func getHeadPosition() -> Double {
     guard let superView = superview else { return 0 }
     if RTLHandler.shared.isRTL() {
       return Double(superView.frame.size.width - frame.midX).rounded(.up)
     }else {
       return Double(frame.midX).rounded(.up)
     }
+  }
+  
+  func getReading(minValue:Double,maxValue:Double) -> Double {
+    guard let superView = superview as? SiriSliderView else { return 0 }
+    let leadingHeadWidth = frame.size.width / 2
+    var position = getHeadPosition()
+    let sliderFrame = superView.frame.size.width
+    if position == sliderFrame - leadingHeadWidth {
+      position += leadingHeadWidth
+    }else if position == leadingHeadWidth {
+      position -= leadingHeadWidth
+    }
+    let ratio = position / sliderFrame
+    return (minValue + (ratio * (maxValue - minValue))).rounded(.down)
   }
 }
